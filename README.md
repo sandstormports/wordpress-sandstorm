@@ -23,10 +23,8 @@ git clone https://github.com/sandstorm-io/vagrant-spk
 git clone https://github.com/dwrensha/wordpress-sandstorm
 export PATH=$(pwd)/vagrant-spk:$PATH
 cd wordpress-sandstorm
-vagrant-spk vm up
 vagrant plugin install vagrant-vbguest
-vagrant halt
-vagrant up
+vagrant-spk vm up
 vagrant-spk dev
 ```
 
