@@ -11,6 +11,9 @@ clean:
 	rm -rf wordpress-read-only
 
 $(git_repo_dir)/wordpress/.git:
+	sudo apt-get update
+	sudo apt-get install -y git g++ automake libtool pkg-config curl
+	sudo apt-get install -y nginx php5-fpm php5-mysql php5-sqlite php5-curl php5-gd
 	git clone ${wordpress_repo} $(git_repo_dir)/wordpress && cd $(git_repo_dir)/wordpress && git checkout ${wordpress_repo_branch}
 
 wordpress-read-only: $(git_repo_dir)/wordpress/.git
