@@ -11,7 +11,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Base on the Sandstorm snapshots of the official Debian 8 (jessie) box.
-  config.vm.box = "sandstorm/debian-jessie64"
+  config.vm.box = "debian/jessie64"
 
   if Vagrant.has_plugin?("vagrant-vbguest") then
     # vagrant-vbguest is a Vagrant plugin that upgrades
@@ -79,6 +79,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.cpus = cpus
     vb.memory = assign_ram_mb
     vb.name = VM_NAME
+    vb.gui = true
     vb.customize ["modifyvm", :id, "--nictype1", "Am79C973"]
 
     # /opt/app and /host-dot-sandstorm are used by vagrant-spk
