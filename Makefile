@@ -12,8 +12,13 @@ clean:
 
 $(git_repo_dir)/wordpress/.git:
 	sudo apt-get update
-	sudo apt-get install -y git g++ automake libtool pkg-config curl
+	sudo apt-get install -y git g++ automake libtool pkg-config curl \
+		build-essential libcap-dev xz-utils zip \
+		unzip strace clang clang-6.0 discount python zlib1g-dev golang \
+		cmake autoconf
+	mkdir ~/go
 	sudo apt-get install -y nginx php-fpm php-mysql php-sqlite3 php-curl php-gd
+
 	git clone ${wordpress_repo} $(git_repo_dir)/wordpress && cd $(git_repo_dir)/wordpress && git checkout ${wordpress_repo_branch}
 
 wordpress-read-only: $(git_repo_dir)/wordpress/.git
