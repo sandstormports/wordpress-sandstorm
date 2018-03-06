@@ -8,8 +8,7 @@ set -euo pipefail
 #
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
-apt-get install -y git g++ automake libtool pkg-config curl
-apt-get install -y nginx php5-fpm php5-mysql php5-sqlite php5-curl php5-gd
-
+apt-get install -y git g++ automake libtool pkg-config
+apt-get install -y nginx php-fpm php-mysql php-sqlite3 php-curl php-gd
 
 exit 0

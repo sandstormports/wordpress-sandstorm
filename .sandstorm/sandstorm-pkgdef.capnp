@@ -3,12 +3,12 @@
 using Spk = import "/sandstorm/package.capnp";
 
 const pkgdef :Spk.PackageDefinition = (
-  id = "aax9j672p6z8n7nyupzvj2nmumeqd4upa0f7mgu8gprwmy53x04h",
+  id = "mvnygc32nfx2gxuz1m2hm64v738jvuwc18jvtc7443krw03x2tu0",
 
   manifest = (
     appTitle = (defaultText = "WordPress"),
-    appVersion = 10,
-    appMarketingVersion = (defaultText = "2016.06.07 (4.4.2)"),
+    appVersion = 11,
+    appMarketingVersion = (defaultText = "2017.03.29 (4.4.2) JJs alpha"),
 
     metadata = (
       icons = (
