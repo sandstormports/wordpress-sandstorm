@@ -1,6 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
+# As we are using an original Debian box image,
+# we ned to add some stuff before we get started
+export DEBIAN_FRONTEND=noninteractive
+apt-get update
+apt-get install -y curl
+
 # Set options for curl. Since we only want to show errors from these curl commands, we also use
 # 'cat' to buffer the output; for more information:
 # https://github.com/sandstorm-io/vagrant-spk/issues/158
