@@ -1,6 +1,6 @@
 #! /bin/sh
 
-/usr/sbin/php5-fpm --fpm-config /etc/php/php-fpm.conf -c /etc/php/php.ini
+/usr/sbin/php-fpm7.0 --fpm-config /etc/php/7.0/fpm/php-fpm.conf -c /etc/php/7.0/fpm/php.ini
 echo "started php-fpm. status code:" $?
 
 CGICONF=/var/fastcgi.conf
