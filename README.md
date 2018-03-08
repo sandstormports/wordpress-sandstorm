@@ -20,7 +20,7 @@ You will need to install:
 
 ```
 git clone https://github.com/sandstorm-io/vagrant-spk
-git clone https://github.com/wekan/wordpress-sandstorm
+git clone https://github.com/wpsandstorm/wordpress-sandstorm
 export PATH=$(pwd)/vagrant-spk:$PATH
 cd wordpress-sandstorm
 vagrant plugin install vagrant-vbguest
