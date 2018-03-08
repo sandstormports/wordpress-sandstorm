@@ -5,7 +5,7 @@
  */
 /*
 Plugin Name: Sandstorm Integration
-Plugin URI: http://github.com/dwrensha/wordpress-sandstorm.git
+Plugin URI: http://github.com/wpsandstorm/wordpress-sandstorm.git
 Description: Lets Sandstorm handle authentication and static web publishing.
 Author: Sandstorm Development Group, Inc.
 Version: 0.0.1

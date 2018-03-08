@@ -1,4 +1,4 @@
-wordpress_repo = https://github.com/dwrensha/wordpress.git
+wordpress_repo = https://github.com/wpsandstorm/wordpress.git
 wordpress_repo_branch = sandstorm-app
 git_repo_dir = /home/vagrant
 
