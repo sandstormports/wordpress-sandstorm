@@ -19,5 +19,5 @@ bin/getPublicId: tmp/genfiles getPublicId.c++
 
 tmp/genfiles: /opt/sandstorm/latest/usr/include/sandstorm/*.capnp
 	mkdir -p tmp
-	capnp compile --src-prefix=/opt/sandstorm/latest/usr/include -oc++:tmp /opt/sandstorm/latest/usr/include/sandstorm/*.capnp
+	capnp compile --src-prefix=/opt/sandstorm/latest/usr/include -I/opt/sandstorm/latest/usr/include -oc++:tmp /opt/sandstorm/latest/usr/include/sandstorm/*.capnp
 	touch tmp/genfiles
