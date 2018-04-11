@@ -1,7 +1,7 @@
 WordPress Sandstorm package
 ===========================
 
-This is the [Sandstorm](https://sandstorm.io) package of [WordPress](https://wordpress.com/). It depends on [this fork](https://github.com/dwrensha/WordPress/tree/sandstorm-app) of WordPress.
+This is the [Sandstorm](https://sandstorm.io) package of [WordPress](https://wordpress.com/). It depends on [this fork](https://github.com/wpsandstorm/wordpress) of WordPress.
 
 # How to
 
