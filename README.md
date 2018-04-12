@@ -3,6 +3,8 @@ WordPress Sandstorm package
 
 This is the [Sandstorm](https://sandstorm.io) package of [WordPress](https://wordpress.com/). It depends on [this fork](https://github.com/wpsandstorm/wordpress) of WordPress.
 
+![Wordpress main view](.sandstorm/app-graphics/wordpress_example_01.png)
+
 # How to
 
 The package is done with [vagrant-spk](https://github.com/sandstorm-io/vagrant-spk), a tool designed to help app developers package apps for [Sandstorm](https://sandstorm.io).

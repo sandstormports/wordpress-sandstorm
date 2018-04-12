@@ -21,7 +21,7 @@ const pkgdef :Spk.PackageDefinition = (
 
     appVersion = 12,  # Increment this for every release.
 
-    appMarketingVersion = (defaultText = "v2018.04.06 (4.9.4) Beta"),
+    appMarketingVersion = (defaultText = "v2018.04.12 (4.9.5)"),
     # Human-readable representation of appVersion. Should match the way you
     # identify versions of your app in documentation and marketing.
 
@@ -124,9 +124,10 @@ const pkgdef :Spk.PackageDefinition = (
         # Screenshots to use for marketing purposes.  Examples below.
         # Sizes are given in device-independent pixels, so if you took these
         # screenshots on a Retina-style high DPI screen, divide each dimension by two.
-
-        (width = 448, height = 346, png = embed "screenshot1.png"),
-        (width = 448, height = 348, png = embed "screenshot2.png"),
+        (width = 1166, height = 675, png = embed "app-graphics/wordpress_example_01.png"),
+        (width = 1166, height = 675, png = embed "app-graphics/wordpress_example_02.png"),
+        (width = 1166, height = 675, png = embed "app-graphics/wordpress_example_03.png"),
+        (width = 1166, height = 675, png = embed "app-graphics/wordpress_example_04.png")
       ],
       changeLog = (defaultText = embed "changelog.md"),
       # Documents the history of changes in Github-flavored markdown format (with the same restrictions

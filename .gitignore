@@ -1,1 +1,5 @@
 .DS_Store
+/wordpress-read-only
+/sandstorm/bin
+/sandstorm/tmp
+*.spk
