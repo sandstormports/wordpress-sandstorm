@@ -17,7 +17,6 @@ $(git_repo_dir)/wordpress/.git:
 		unzip strace clang discount python zlib1g-dev golang \
 		cmake autoconf
 	mkdir ~/go
-	sudo apt-get install -y nginx php-fpm php-mysql php-sqlite3 php-curl php-gd
 
 	git clone ${wordpress_repo} $(git_repo_dir)/wordpress && cd $(git_repo_dir)/wordpress && git checkout ${wordpress_repo_branch}
 
@@ -28,7 +27,6 @@ wordpress-read-only: $(git_repo_dir)/wordpress/.git
 	mv wordpress-read-only/wp-content wordpress-read-only/wp-content-read-only
 	ln -s /var/wordpress/wp-content wordpress-read-only/wp-content
 	cp read-only-plugins/sqlite-integration/db.php wordpress-read-only/wp-content-read-only/
-
 
 sandstorm/bin/getPublicId: /usr/local/bin/capnp
 	(cd sandstorm && make CXX=g++)

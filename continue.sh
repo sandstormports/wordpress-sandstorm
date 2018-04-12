@@ -1,6 +1,6 @@
 #! /bin/sh
 
-/usr/sbin/php-fpm7.0 --fpm-config /etc/php/7.0/fpm/php-fpm.conf -c /etc/php/7.0/fpm/php.ini
+/usr/sbin/php-fpm7.2 --fpm-config /etc/php/7.2/fpm/php-fpm.conf -c /etc/php/7.2/fpm/php.ini
 echo "started php-fpm. status code:" $?
 
 CGICONF=/var/fastcgi.conf
@@ -18,10 +18,7 @@ fastcgi_param WORDPRESS_SECURE_AUTH_SALT;
 fastcgi_param WORDPRESS_LOGGED_IN_SALT;
 fastcgi_param WORDPRESS_NONCE_SALT;
 
-
 /usr/sbin/nginx -g "pid /var/run/nginx.pid;"
 echo "started nginx. status code:" $?
 
-
 sleep infinity
-
