@@ -27,6 +27,30 @@ EOF
 
 apt-get update
 apt-get install -y git g++ automake libtool pkg-config
-apt-get install -y nginx sqlite3 php-fpm php-mysql php-sqlite3 php-curl php-gd
+apt-get install -y nginx php7.2-fpm php7.2-sqlite3 php7.2-cli php7.2-curl git php7.2-dev php7.2-gd
+service nginx stop
+service php7.2-fpm stop
+systemctl disable nginx
+systemctl disable php7.2-fpm
+# patch /etc/php/7.2/fpm/pool.d/www.conf to not change uid/gid to www-data
+sed --in-place='' \
+        --expression='s/^listen.owner = www-data/;listen.owner = www-data/' \
+        --expression='s/^listen.group = www-data/;listen.group = www-data/' \
+        --expression='s/^user = www-data/;user = www-data/' \
+        --expression='s/^group = www-data/;group = www-data/' \
+        /etc/php/7.2/fpm/pool.d/www.conf
+# patch /etc/php/7.2/fpm/php-fpm.conf to not have a pidfile
+sed --in-place='' \
+        --expression='s/^pid =/;pid =/' \
+        /etc/php/7.2/fpm/php-fpm.conf
+# patch /etc/php/7.2/fpm/php-fpm.conf to place the sock file in /var
+sed --in-place='' \
+       --expression='s/^listen = \/run\/php\/php7.2-fpm.sock/listen = \/var\/run\/php\/php7.2-fpm.sock/' \
+       /etc/php/7.2/fpm/pool.d/www.conf
+# patch /etc/php/7.2/fpm/pool.d/www.conf to no clear environment variables
+# so we can pass in SANDSTORM=1 to apps
+sed --in-place='' \
+        --expression='s/^;clear_env = no/clear_env=no/' \
+        /etc/php/7.2/fpm/pool.d/www.conf
 
 exit 0
