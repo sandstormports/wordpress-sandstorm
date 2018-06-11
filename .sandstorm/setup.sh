@@ -27,7 +27,7 @@ EOF
 
 apt-get update
 apt-get install -y git g++ automake libtool pkg-config
-apt-get install -y nginx php7.2-fpm php7.2-sqlite3 php7.2-cli php7.2-curl git php7.2-dev php7.2-gd
+apt-get install -y nginx php7.2-fpm php7.2-sqlite3 php7.2-cli php7.2-curl git php7.2-dev php7.2-gd sqlite3
 service nginx stop
 service php7.2-fpm stop
 systemctl disable nginx
