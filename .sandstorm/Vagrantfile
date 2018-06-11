@@ -1,22 +1,21 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-
 # Guess at a reasonable name for the VM based on the folder vagrant-spk is
 # run from.  The timestamp is there to avoid conflicts if you have multiple
 # folders with the same name.
 VM_NAME = File.basename(File.dirname(File.dirname(__FILE__))) + "_sandstorm_#{Time.now.utc.to_i}"
-
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
-
 # ugly hack to prevent hashicorp's bitrot. See https://github.com/hashicorp/vagrant/issues/9442
-Vagrant::DEFAULT_SERVER_URL.replace('https://vagrantcloud.com')
-
+# this setting is required for pre-2.0 vagrant, but causes an error as of 2.0.3,
+# remove entirely when confident nobody uses vagrant 1.x for anything.
+unless Vagrant::DEFAULT_SERVER_URL.frozen?
+  Vagrant::DEFAULT_SERVER_URL.replace('https://vagrantcloud.com')
+end
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  # Base on the snapshots of the official Debian box.
+  # Base on the Sandstorm snapshots of the official Debian 9 (stretch) box with vboxsf support.
   config.vm.box = "debian/contrib-stretch64"
   config.vm.box_version = "9.3.0"
-
   if Vagrant.has_plugin?("vagrant-vbguest") then
     # vagrant-vbguest is a Vagrant plugin that upgrades
     # the version of VirtualBox Guest Additions within each
@@ -25,27 +24,22 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # we give it this hint about operating system type.
     config.vm.guest = "debian"
   end
-
   # We forward port 6080, the Sandstorm web port, so that developers can
   # visit their sandstorm app from their browser as local.sandstorm.io:6080
   # (aka 127.0.0.1:6080).
   config.vm.network :forwarded_port, guest: 6080, host: 6080, host_ip: "127.0.0.1"
-
   # Use a shell script to "provision" the box. This installs Sandstorm using
   # the bundled installer.
   config.vm.provision "shell", inline: "sudo bash /opt/app/.sandstorm/global-setup.sh", keep_color: true
   # Then, do stack-specific and app-specific setup.
   config.vm.provision "shell", inline: "sudo bash /opt/app/.sandstorm/setup.sh", keep_color: true
-
   # Shared folders are configured per-provider since vboxsf can't handle >4096 open files,
   # NFS requires privilege escalation every time you bring a VM up,
   # and 9p is only available on libvirt.
-
   # Calculate the number of CPUs and the amount of RAM the system has,
   # in a platform-dependent way; further logic below.
   cpus = nil
   total_kB_ram = nil
-
   host = RbConfig::CONFIG['host_os']
   if host =~ /darwin/
     cpus = `sysctl -n hw.ncpu`.to_i
@@ -83,9 +77,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.cpus = cpus
     vb.memory = assign_ram_mb
     vb.name = VM_NAME
-    vb.gui = true
     vb.customize ["modifyvm", :id, "--nictype1", "Am79C973"]
-
     # /opt/app and /host-dot-sandstorm are used by vagrant-spk
     override.vm.synced_folder "..", "/opt/app"
     override.vm.synced_folder ENV["HOME"] + "/.sandstorm", "/host-dot-sandstorm"
@@ -97,7 +89,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     libvirt.cpus = cpus
     libvirt.memory = assign_ram_mb
     libvirt.default_prefix = VM_NAME
-
     # /opt/app and /host-dot-sandstorm are used by vagrant-spk
     override.vm.synced_folder "..", "/opt/app", type: "9p", accessmode: "passthrough"
     override.vm.synced_folder ENV["HOME"] + "/.sandstorm", "/host-dot-sandstorm", type: "9p", accessmode: "passthrough"
