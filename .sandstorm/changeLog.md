@@ -1,4 +1,12 @@
-### v2018.04.12 (4.9.5) Beta
+## v2018.06.25 (4.9.6) beta
+- Issue #11 fixed
+## v2018.06.15 (4.9.6)
+- No solved issues included, this is a maintenance update
+- Update to Wordpress upstream version 4.9.6
+- Privacy and Maintenance Release, for Details see: [LINK](https://wordpress.org/news/2018/05/wordpress-4-9-6-privacy-and-maintenance-release/)
+- Updated Vagrant file template
+- Updated setup.sh template
+### v2018.04.12 (4.9.5)
 - a lot of plugin and template issues have been solved by updating to the latest Wordpress version 4.9.5
 - Updated environment (spk based on Debian Buster / Testing incl. php7.2 & latest SQLite)
 - Updated Wordpress importer plugin
