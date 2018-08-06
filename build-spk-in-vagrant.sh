@@ -1,5 +1,5 @@
 # mkdir ~/repos
 # cd repos
-# git clone git@github.com:wpsandstorm/wordpress-sandstorm.git
+# git clone git@github.com:sandstormports/wordpress-sandstorm.git
 vagrant-spk vm up
 vagrant-spk dev

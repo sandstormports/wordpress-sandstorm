@@ -120,7 +120,7 @@ lib/x86_64-linux-gnu/libexpat.so.1
 lib/x86_64-linux-gnu/libexpat.so.1.6.2
 lib/x86_64-linux-gnu/libgcc_s.so.1
 lib/x86_64-linux-gnu/libgcrypt.so.20
-lib/x86_64-linux-gnu/libgcrypt.so.20.2.2
+lib/x86_64-linux-gnu/libgcrypt.so.20.2.3
 lib/x86_64-linux-gnu/libgpg-error.so.0
 lib/x86_64-linux-gnu/libgpg-error.so.0.21.0
 lib/x86_64-linux-gnu/libidn.so.11
@@ -255,7 +255,7 @@ usr/lib/x86_64-linux-gnu/libXdmcp.so.6
 usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
 usr/lib/x86_64-linux-gnu/libXpm.so.4
 usr/lib/x86_64-linux-gnu/libXpm.so.4.11.0
-usr/lib/x86_64-linux-gnu/libargon2.so.0
+usr/lib/x86_64-linux-gnu/libargon2.so.1
 usr/lib/x86_64-linux-gnu/libcrypto.so.1.0.2
 usr/lib/x86_64-linux-gnu/libcrypto.so.1.1
 usr/lib/x86_64-linux-gnu/libcurl.so.4
@@ -1026,6 +1026,7 @@ wordpress-read-only/wp-content-read-only/themes/twentysixteen/template-parts/con
 wordpress-read-only/wp-content-read-only/themes/twentysixteen/template-parts/content-search.php
 wordpress-read-only/wp-content-read-only/themes/twentysixteen/template-parts/content-single.php
 wordpress-read-only/wp-content-read-only/themes/twentysixteen/template-parts/content.php
+wordpress-read-only/wp-content-read-only/wp-content
 wordpress-read-only/wp-cron.php
 wordpress-read-only/wp-includes/ID3/getid3.lib.php
 wordpress-read-only/wp-includes/ID3/getid3.php

@@ -1,3 +1,6 @@
+## v2018.08.06 (4.9.8)
+- Update to Wordpress upstream version 4.9.8
+- Updated environment (OS, dependencies etc.)
 ## v2018.06.25 (4.9.6)
 - Issue #11 fixed
 ## v2018.06.15 (4.9.6)
