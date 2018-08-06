@@ -20,6 +20,9 @@ done
 find $TMPDIR -type f -exec sed -i "s|${REPLACE_URL}/|/|g" {} \;
 find $TMPDIR -type f -exec sed -i "s|${REPLACE_URL}|/|g" {} \; # URLs without a trailing / need to be changed to point the index
 
+#for JavaScript
+find $TMPDIR -type f -exec sed -i "s|http:\\\/\\\/this_will_be_replaced_by_sandstorm:10000\\\/|\/|g" {} \;
+
 # Make sure to copy over all of the uploads. This is necessary because the current release of wget
 # does not yet support srcset in img tags.
 cp -r /var/wordpress/wp-content/uploads $TMPDIR/wp-content/
