@@ -18,6 +18,8 @@ etc/bindresvport.blacklist
 etc/default/nss
 etc/group
 etc/hosts
+etc/init.d
+etc/inputrc
 etc/ld.so.cache
 etc/localtime
 etc/nginx/fastcgi.conf
@@ -92,6 +94,7 @@ etc/php/7.2/mods-available/xsl.ini
 etc/services
 etc/ssl/openssl.cnf
 etc/wgetrc
+initrd.img
 lib/x86_64-linux-gnu/ld-2.27.so
 lib/x86_64-linux-gnu/libacl.so.1
 lib/x86_64-linux-gnu/libacl.so.1.1.0
@@ -132,6 +135,8 @@ lib/x86_64-linux-gnu/libncurses.so.5
 lib/x86_64-linux-gnu/libncurses.so.5.9
 lib/x86_64-linux-gnu/libncurses.so.6
 lib/x86_64-linux-gnu/libncurses.so.6.1
+lib/x86_64-linux-gnu/libncursesw.so.5
+lib/x86_64-linux-gnu/libncursesw.so.5.9
 lib/x86_64-linux-gnu/libnsl-2.27.so
 lib/x86_64-linux-gnu/libnsl.so.1
 lib/x86_64-linux-gnu/libnss_compat-2.27.so
@@ -165,6 +170,9 @@ lib/x86_64-linux-gnu/libz.so.1
 lib/x86_64-linux-gnu/libz.so.1.2.11
 lib64
 lib64/ld-linux-x86-64.so.2
+opt
+opt/app
+opt/app/publish-it.sh
 proc/cpuinfo
 publish-it.sh
 read-only-plugins/mu-plugins
@@ -202,7 +210,10 @@ start.sh
 usr/bin/base64
 usr/bin/find
 usr/bin/head
+usr/bin/id
 usr/bin/wget
+usr/lib/git-core/git-sh-prompt
+usr/lib/locale/locale-archive
 usr/lib/php/20170718/calendar.so
 usr/lib/php/20170718/ctype.so
 usr/lib/php/20170718/curl.so
@@ -643,6 +654,8 @@ usr/share/zoneinfo/Universal
 usr/share/zoneinfo/Zulu
 usr/share/zoneinfo/localtime
 usr/share/zoneinfo/zone.tab
+vmlinuz
+wordpress-read-only
 wordpress-read-only/index.php
 wordpress-read-only/wp-admin
 wordpress-read-only/wp-admin/about.php

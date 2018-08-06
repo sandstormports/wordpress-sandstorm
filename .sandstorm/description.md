@@ -16,3 +16,5 @@ published content can only be static and gets served by Sandstorm's web publishi
 while the WordPress admin panel is only accessible to authorized users through the Sandstorm shell.
 This has advantages for your site's speed and security, though it does mean that WordPress's Comments feature
 will not work on your published site.
+
+** Please post any questions or issues on _[GitHub](https://github.com/sandstormports/wordpress-sandstorm/issues)_ or in our _[Google Group](https://groups.google.com/forum/#!forum/sandstorm-dev)_. It's not possible to answer any market place reviews, but we are here to help!**

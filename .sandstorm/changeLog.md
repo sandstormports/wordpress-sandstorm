@@ -1,4 +1,4 @@
-## v2018.06.25 (4.9.6) beta
+## v2018.06.25 (4.9.6)
 - Issue #11 fixed
 ## v2018.06.15 (4.9.6)
 - No solved issues included, this is a maintenance update
