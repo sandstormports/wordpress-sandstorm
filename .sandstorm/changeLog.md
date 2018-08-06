@@ -1,5 +1,5 @@
 ## v2018.08.06 (4.9.8)
-- Update to Wordpress upstream version 4.9.8
+- Update to Wordpress upstream version 4.9.8 (with classic editor, no Gutenberg editor for now)
 - Updated environment (OS, dependencies etc.)
 ## v2018.06.25 (4.9.6)
 - Issue #11 fixed
