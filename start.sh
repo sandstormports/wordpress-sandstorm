@@ -13,7 +13,4 @@ been published. Go click the "Rebuild Public Site" button! </p>
 </body></html>
 __EOF__
 
-cp -r /wordpress-read-only/wp-content-read-only/* /var/wordpress/wp-content
-
 ./continue.sh
-

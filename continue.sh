@@ -1,5 +1,7 @@
 #! /bin/sh
 
+cp -r /wordpress-read-only/wp-content-read-only/* /var/wordpress/wp-content
+
 /usr/sbin/php-fpm7.2 --fpm-config /etc/php/7.2/fpm/php-fpm.conf -c /etc/php/7.2/fpm/php.ini
 echo "started php-fpm. status code:" $?
 
