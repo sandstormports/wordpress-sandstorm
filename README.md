@@ -16,14 +16,16 @@ You can follow the below mentioned steps to make your own package or to contribu
 You will need to install:
 - [Vagrant](https://www.vagrantup.com/)
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-- Git
+- [Git](https://git-scm.com/downloads) or any Git-client you like to use
 
 ## Step by Step
 
 ```
 git clone https://github.com/sandstorm-io/vagrant-spk
 git clone https://github.com/wpsandstorm/wordpress-sandstorm
+cd vagrant-spk
 export PATH=$(pwd)/vagrant-spk:$PATH
+cd ..
 cd wordpress-sandstorm
 vagrant plugin install vagrant-vbguest
 vagrant-spk vm up
