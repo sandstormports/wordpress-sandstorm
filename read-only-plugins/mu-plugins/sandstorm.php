@@ -103,7 +103,7 @@ function sandstorm_publishing_info() {
    <p class="submit">
     <input type="hidden" name="action" value="generate_static">
    <?php wp_nonce_field( 'generate-static' ); ?>
-   <?php submit_button(__('Rebuild Public Site'), 'primary', 'generate', false); ?>
+   <?php submit_button(__('Rebuild Public Site', 'sandstorm-integration'), 'primary', 'generate', false); ?>
    <br class="clear"/>
    </p>
   </form>
@@ -154,8 +154,11 @@ function add_sandstorm_dashboard_widget() {
     remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
 
     if (current_user_can('publish_pages')) {
-        wp_add_dashboard_widget( 'sandstorm_dashboard_widget', 'Sandstorm Publishing Information',
-            'sandstorm_publishing_info');
+        wp_add_dashboard_widget( 
+            'sandstorm_dashboard_widget', 
+            __('Sandstorm Publishing Information', 'sandstorm-integration'),
+            'sandstorm_publishing_info'
+        );
     }
 
 }
@@ -167,14 +170,14 @@ add_action( 'wp_dashboard_setup', 'add_sandstorm_dashboard_widget' );
 add_filter( 'plugin_action_links', 'disable_plugin_deactivation', 10, 4 );
 function disable_plugin_deactivation( $actions, $plugin_file, $plugin_data, $context ) {
 
-  $vital_plugins = array('sqlite-integration/sqlite-integration.php');
+    $vital_plugins = array('sqlite-integration/sqlite-integration.php');
 
-  if (in_array($plugin_file, $vital_plugins)) {
+    if (in_array($plugin_file, $vital_plugins)) {
 
-    // Remove deactivate link.
-    if ( array_key_exists( 'deactivate', $actions ) ) {
-      unset( $actions['deactivate'] );
-    }
+        // Remove deactivate link.
+        if ( array_key_exists( 'deactivate', $actions ) ) {
+            unset( $actions['deactivate'] );
+        }
 
     $actions['warning'] = 'Needed by Sandstorm.';
 
