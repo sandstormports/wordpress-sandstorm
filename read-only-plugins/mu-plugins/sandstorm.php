@@ -13,9 +13,17 @@ Author URI: https://sandstorm.io
 Text Domain: sandstorm-integration 
 */
 
+// Load plugin textdomain
+add_action( 'plugins_loaded', 'mu_plugin_load_textdomain' );
+
+function mu_plugin_load_textdomain() {
+    $domain = 'sandstorm-integration';
+    load_textdomain($domain, plugin_dir_path(__FILE__) . '/languages/' . $domain . '-' . get_locale() . '.mo');
+}
+
 // don't redirect to wp-login.php
 if (!function_exists('auth_redirect')) {
-  function auth_redirect() {}
+    function auth_redirect() {}
 }
 
 function auto_login() {
