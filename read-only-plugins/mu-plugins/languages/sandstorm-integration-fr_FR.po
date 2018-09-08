@@ -46,7 +46,7 @@ msgid ""
 "      in order for those changes to become visible on the public site."
 msgstr ""
 "Pour actualiser votre site, cliquez sur le bouton ci-dessous.\n"
-"      Notez que vous devez actualiser dès que vous avez réalisé des modifications\n"
+"      Notez que vous devez le faire dès que vous avez réalisé des modifications\n"
 "      pour que ces changements deviennent visibles sur le site public."
 
 #. ('sandstorm-integration')

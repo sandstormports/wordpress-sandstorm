@@ -14,9 +14,9 @@ Text Domain: sandstorm-integration
 */
 
 // Load plugin textdomain
-add_action( 'plugins_loaded', 'mu_plugin_load_textdomain' );
+add_action( 'plugins_loaded', 'sandstorm_load_textdomain' );
 
-function mu_plugin_load_textdomain() {
+function sandstorm_load_textdomain() {
     $domain = 'sandstorm-integration';
     load_textdomain($domain, plugin_dir_path(__FILE__) . '/languages/' . $domain . '-' . get_locale() . '.mo');
 }
