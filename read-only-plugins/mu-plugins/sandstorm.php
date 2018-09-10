@@ -10,11 +10,20 @@ Description: Lets Sandstorm handle authentication and static web publishing.
 Author: Sandstorm Development Group, Inc.
 Version: 0.0.1
 Author URI: https://sandstorm.io
+Text Domain: sandstorm-integration 
 */
+
+// Load plugin textdomain
+add_action( 'plugins_loaded', 'sandstorm_load_textdomain' );
+
+function sandstorm_load_textdomain() {
+    $domain = 'sandstorm-integration';
+    load_textdomain($domain, plugin_dir_path(__FILE__) . '/languages/' . $domain . '-' . get_locale() . '.mo');
+}
 
 // don't redirect to wp-login.php
 if (!function_exists('auth_redirect')) {
-  function auth_redirect() {}
+    function auth_redirect() {}
 }
 
 function auto_login() {
@@ -87,21 +96,22 @@ function sandstorm_publishing_info() {
   $lines = array();
   $result = exec('/sandstorm/bin/getPublicId ' . $headers['X-Sandstorm-Session-Id'], $lines);
 
-  echo "<p>Your public site is available at: <a target='_blank' href='$lines[2]'>$lines[2]</a></p>";
+  echo "<p>" . __('Your public site is available at:', 'sandstorm-integration') . " <a target='_blank' href='$lines[2]'>$lines[2]</a></p>";
+
+
+  echo "<p>" .
+      __('To rebuild your public site, click the below button.
+      Note that you must click this button after making any changes
+      in order for those changes to become visible on the public site.', 
+      'sandstorm-integration' ) .
+      "</p>";
 
   ?>
-
-   <p>
-      To rebuild your public site, click the below button.
-      Note that you must click this button after making any changes
-      in order for those changes to become visible on the public site.
-   </p>
-
   <form name="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" id="generate-static" class="initial-form">
    <p class="submit">
     <input type="hidden" name="action" value="generate_static">
    <?php wp_nonce_field( 'generate-static' ); ?>
-   <?php submit_button(__('Rebuild Public Site'), 'primary', 'generate', false); ?>
+   <?php submit_button(__('Rebuild Public Site', 'sandstorm-integration'), 'primary', 'generate', false); ?>
    <br class="clear"/>
    </p>
   </form>
@@ -110,49 +120,54 @@ function sandstorm_publishing_info() {
   <?php
 
   if ($lines[3] == 'true') {
-    echo "<p>If you weren't using a demo account, you could additionally publish the site to an arbitrary domain you control.</p>";
-    return;
+      echo "<p>" .
+          __("If you weren't using a demo account, you could additionally publish the site to an arbitrary domain you control.", 
+          'sandstorm-integration' ) .
+          "</p>";
+      return;
   }
 
-  ?>
-
-  <p> To set up your domain to point at your public site,
-  add the following DNS records to your domain. Replace <code>host.example.com</code> with your site's hostname.
-  </p>
+  echo "<p>" .
+      __("To set up your domain to point at your public site, add the following DNS records to your domain. 
+      Replace <code>host.example.com</code> with your site's hostname.", 'sandstorm-integration' ) .
+      "</p>";
+?>
   <br>
-  <?php
+<?php
 
   $cname = parse_url($lines[2], PHP_URL_HOST);
   echo "<code>host.example.com IN CNAME $cname <br>";
   echo "sandstorm-www.host.example.com IN TXT $lines[0] </code>";
-  ?>
-  <p/>
-  <p>
-  Note: If your site may get a lot of traffic, consider putting it behind a CDN.
-  <a href="https://cloudflare.com" target="_blank">CloudFlare</a>, for example, can do this for free.
-  </p>
 
-  <?php
+  echo "<p>" .
+      __('Note: If your site may get a lot of traffic, consider putting it behind a CDN.
+      <a href="https://cloudflare.com" target="_blank">CloudFlare</a>, for example, can do this for free.', 
+      'sandstorm-integration' ) .
+      "</p>" ;
+
 }
 
 add_action('admin_post_generate_static', 'sandstorm_generate_static');
 
 function sandstorm_generate_static() {
-  if (current_user_can('publish_pages')) {
-    sandstorm_publish();
-    wp_redirect(wp_guess_url() . '/wp-admin/index.php');
-    die();
-  }
+    if (current_user_can('publish_pages')) {
+        sandstorm_publish();
+        wp_redirect(wp_guess_url() . '/wp-admin/index.php');
+        die();
+    }
 }
 
 function add_sandstorm_dashboard_widget() {
-  remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
-  remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
+    remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
+    remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
 
-  if (current_user_can('publish_pages')) {
-      wp_add_dashboard_widget( 'sandstorm_dashboard_widget', 'Sandstorm Publishing Information',
-                               'sandstorm_publishing_info');
-  }
+    if (current_user_can('publish_pages')) {
+        wp_add_dashboard_widget( 
+            'sandstorm_dashboard_widget', 
+            __('Sandstorm Publishing Information', 'sandstorm-integration'),
+            'sandstorm_publishing_info'
+        );
+    }
 
 }
 
@@ -163,14 +178,14 @@ add_action( 'wp_dashboard_setup', 'add_sandstorm_dashboard_widget' );
 add_filter( 'plugin_action_links', 'disable_plugin_deactivation', 10, 4 );
 function disable_plugin_deactivation( $actions, $plugin_file, $plugin_data, $context ) {
 
-  $vital_plugins = array('sqlite-integration/sqlite-integration.php');
+    $vital_plugins = array('sqlite-integration/sqlite-integration.php');
 
-  if (in_array($plugin_file, $vital_plugins)) {
+    if (in_array($plugin_file, $vital_plugins)) {
 
-    // Remove deactivate link.
-    if ( array_key_exists( 'deactivate', $actions ) ) {
-      unset( $actions['deactivate'] );
-    }
+        // Remove deactivate link.
+        if ( array_key_exists( 'deactivate', $actions ) ) {
+            unset( $actions['deactivate'] );
+        }
 
     $actions['warning'] = 'Needed by Sandstorm.';
 
