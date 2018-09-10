@@ -178,6 +178,8 @@ opt/app/wordpress-read-only/wp-content
 proc/cpuinfo
 publish-it.sh
 read-only-plugins/mu-plugins
+read-only-plugins/mu-plugins/languages/sandstorm-integration-de_DE.mo
+read-only-plugins/mu-plugins/languages/sandstorm-integration-fr_FR.mo
 read-only-plugins/mu-plugins/sandstorm.php
 read-only-plugins/sqlite-integration
 read-only-plugins/sqlite-integration/db.php

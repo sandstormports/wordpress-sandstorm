@@ -1,0 +1,64 @@
+# WordPress Sandstorm package localisation
+# Copyright (C) 2018
+# This file is distributed under the same license as the Wordpress Sandstorm package.
+# Jan Jambor, XWare GmbH <jan.jambor@xwr.ch>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.0.1\n"
+"POT-Creation-Date: 2018-09-08 00:22\n"
+"PO-Revision-Date: 2018-09-08 00:22\n"
+"Last-Translator: Jan Jambor, XWare GmbH <jan.jambor@xwr.ch>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. ('sandstorm-integration')
+#: /Users/jj/Development/wordpress-sandstorm/read-only-plugins/mu-plugins/sandstorm.php:117
+msgid "If you weren't using a demo account, you could additionally publish the site to an arbitrary domain you control."
+msgstr "Wenn Sie kein Demo-Konto verwenden, können Sie die Website zusätzlich in einer beliebigen Domäne veröffentlichen, die Sie kontrollieren."
+
+#. ('sandstorm-integration')
+#: /Users/jj/Development/wordpress-sandstorm/read-only-plugins/mu-plugins/sandstorm.php:136
+msgid ""
+"Note: If your site may get a lot of traffic, consider putting it behind a CDN.\n"
+"      <a href=\"https://cloudflare.com\" target=\"_blank\">CloudFlare</a>, for example, can do this for free."
+msgstr "Hinweis: Wenn Ihre Website viele Besucher erwartet, sollten Sie ein CDN nutzen.\n"
+"      <a href=\"https://cloudflare.com\" target=\"_blank\">CloudFlare</a> bietet zum Beispiel ein kostenloses Paket an."
+
+#. ('sandstorm-integration')
+#: /Users/jj/Development/wordpress-sandstorm/read-only-plugins/mu-plugins/sandstorm.php:106
+msgid "Rebuild Public Site"
+msgstr "Öffentliche Website aktualisieren"
+
+#. ('sandstorm-integration')
+#: /Users/jj/Development/wordpress-sandstorm/read-only-plugins/mu-plugins/sandstorm.php:159
+msgid "Sandstorm Publishing Information"
+msgstr "Informationen zur Veröffentlichung über Sandstorm"
+
+#. ('sandstorm-integration')
+#: /Users/jj/Development/wordpress-sandstorm/read-only-plugins/mu-plugins/sandstorm.php:96
+msgid ""
+"To rebuild your public site, click the below button.\n"
+"      Note that you must click this button after making any changes\n"
+"      in order for those changes to become visible on the public site."
+msgstr ""
+"Um Ihre öffentliche Website neu zu erstellen, klicken Sie auf die folgende Schaltfläche.\n"
+"      Beachten Sie, dass Sie nach allen Änderungen auf diese Schaltfläche klicken\n"
+"      müssen, damit diese Änderungen auf der öffentlichen Website sichtbar werden."
+
+#. ('sandstorm-integration')
+#: /Users/jj/Development/wordpress-sandstorm/read-only-plugins/mu-plugins/sandstorm.php:123
+msgid ""
+"To set up your domain to point at your public site, add the following DNS records to your domain. \n"
+"      Replace <code>host.example.com</code> with your site's hostname."
+msgstr ""
+"Um Ihre Domain so einzurichten, dass sie auf Ihre öffentliche Website zeigt, fügen Sie die folgenden DNS-Einträge zu Ihrer Domain hinzu.\n"
+"      Ersetzen Sie <code>host.example.com</code> durch den Hostnamen Ihrer Website."
+
+#. ('sandstorm-integration')
+#: /Users/jj/Development/wordpress-sandstorm/read-only-plugins/mu-plugins/sandstorm.php:91
+msgid "Your public site is available at:"
+msgstr "Ihre öffentliche Website ist unter folgender URL verfügbar:"

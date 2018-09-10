@@ -1,5 +1,7 @@
-## v2018.08.06 (4.9.8)
-- Update to Wordpress upstream version 4.9.8 (with classic editor, no Gutenberg editor for now)
+## v2018.09.10 (4.9.8)
+- Wordpress localistaion for the top 10 languages. Big thanks to [@jeau](https://github.com/jeau)!
+- Localised Sandstorm Widget on Dashboard (EN, FR, DE, contributions welcome). Thanks [@jeau](https://github.com/jeau)!
+- Update to Wordpress upstream version 4.9.8
 - Updated environment (OS, dependencies etc.)
 ## v2018.06.25 (4.9.6)
 - Issue #11 fixed
