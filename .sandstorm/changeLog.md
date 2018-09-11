@@ -1,3 +1,5 @@
+## v2018.09.11 (4.9.8)
+- Add Finnish FI translation #36
 ## v2018.09.10 (4.9.8)
 - Wordpress localistaion for the top 10 languages. Big thanks to [@jeau](https://github.com/jeau)!
 - Localised Sandstorm Widget on Dashboard (EN, FR, DE, contributions welcome). Thanks [@jeau](https://github.com/jeau)!

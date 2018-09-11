@@ -179,6 +179,7 @@ proc/cpuinfo
 publish-it.sh
 read-only-plugins/mu-plugins
 read-only-plugins/mu-plugins/languages/sandstorm-integration-de_DE.mo
+read-only-plugins/mu-plugins/languages/sandstorm-integration-fi.mo
 read-only-plugins/mu-plugins/languages/sandstorm-integration-fr_FR.mo
 read-only-plugins/mu-plugins/sandstorm.php
 read-only-plugins/sqlite-integration
@@ -875,15 +876,18 @@ wordpress-read-only/wp-content-read-only/db.php
 wordpress-read-only/wp-content-read-only/index.php
 wordpress-read-only/wp-content-read-only/install.php
 wordpress-read-only/wp-content-read-only/languages
+wordpress-read-only/wp-content-read-only/languages/.DS_Store
 wordpress-read-only/wp-content-read-only/languages/admin-ar.mo
 wordpress-read-only/wp-content-read-only/languages/admin-de_DE.mo
 wordpress-read-only/wp-content-read-only/languages/admin-es_ES.mo
+wordpress-read-only/wp-content-read-only/languages/admin-fi.mo
 wordpress-read-only/wp-content-read-only/languages/admin-fr_FR.mo
 wordpress-read-only/wp-content-read-only/languages/admin-ja.mo
 wordpress-read-only/wp-content-read-only/languages/admin-ms_MY.mo
 wordpress-read-only/wp-content-read-only/languages/admin-network-ar.mo
 wordpress-read-only/wp-content-read-only/languages/admin-network-de_DE.mo
 wordpress-read-only/wp-content-read-only/languages/admin-network-es_ES.mo
+wordpress-read-only/wp-content-read-only/languages/admin-network-fi.mo
 wordpress-read-only/wp-content-read-only/languages/admin-network-fr_FR.mo
 wordpress-read-only/wp-content-read-only/languages/admin-network-ja.mo
 wordpress-read-only/wp-content-read-only/languages/admin-network-ms_MY.mo
@@ -897,6 +901,7 @@ wordpress-read-only/wp-content-read-only/languages/ar.mo
 wordpress-read-only/wp-content-read-only/languages/continents-cities-ar.mo
 wordpress-read-only/wp-content-read-only/languages/continents-cities-de_DE.mo
 wordpress-read-only/wp-content-read-only/languages/continents-cities-es_ES.mo
+wordpress-read-only/wp-content-read-only/languages/continents-cities-fi.mo
 wordpress-read-only/wp-content-read-only/languages/continents-cities-fr_FR.mo
 wordpress-read-only/wp-content-read-only/languages/continents-cities-ja.mo
 wordpress-read-only/wp-content-read-only/languages/continents-cities-ms_MY.mo
@@ -905,6 +910,7 @@ wordpress-read-only/wp-content-read-only/languages/continents-cities-ru_RU.mo
 wordpress-read-only/wp-content-read-only/languages/continents-cities-zh_CN.mo
 wordpress-read-only/wp-content-read-only/languages/de_DE.mo
 wordpress-read-only/wp-content-read-only/languages/es_ES.mo
+wordpress-read-only/wp-content-read-only/languages/fi.mo
 wordpress-read-only/wp-content-read-only/languages/fr_FR.mo
 wordpress-read-only/wp-content-read-only/languages/ja.mo
 wordpress-read-only/wp-content-read-only/languages/ms_MY.mo
@@ -920,6 +926,7 @@ wordpress-read-only/wp-content-read-only/languages/plugins/classic-editor-zh_CN.
 wordpress-read-only/wp-content-read-only/languages/plugins/wordpress-importer-ar.mo
 wordpress-read-only/wp-content-read-only/languages/plugins/wordpress-importer-de_DE.mo
 wordpress-read-only/wp-content-read-only/languages/plugins/wordpress-importer-es_ES.mo
+wordpress-read-only/wp-content-read-only/languages/plugins/wordpress-importer-fi.mo
 wordpress-read-only/wp-content-read-only/languages/plugins/wordpress-importer-fr_FR.mo
 wordpress-read-only/wp-content-read-only/languages/plugins/wordpress-importer-ja.mo
 wordpress-read-only/wp-content-read-only/languages/plugins/wordpress-importer-ms_MY.mo
@@ -932,6 +939,7 @@ wordpress-read-only/wp-content-read-only/languages/themes
 wordpress-read-only/wp-content-read-only/languages/themes/twentyfifteen-ar.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentyfifteen-de_DE.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentyfifteen-es_ES.mo
+wordpress-read-only/wp-content-read-only/languages/themes/twentyfifteen-fi.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentyfifteen-fr_FR.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentyfifteen-ja.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentyfifteen-ms_MY.mo
@@ -939,6 +947,7 @@ wordpress-read-only/wp-content-read-only/languages/themes/twentyfifteen-pt_PT.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentyfifteen-ru_RU.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentyseventeen-de_DE.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentyseventeen-es_ES.mo
+wordpress-read-only/wp-content-read-only/languages/themes/twentyseventeen-fi.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentyseventeen-fr_FR.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentyseventeen-ja.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentyseventeen-ms_MY.mo
@@ -948,6 +957,7 @@ wordpress-read-only/wp-content-read-only/languages/themes/twentyseventeen-zh_CN.
 wordpress-read-only/wp-content-read-only/languages/themes/twentysixteen-ar.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentysixteen-de_DE.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentysixteen-es_ES.mo
+wordpress-read-only/wp-content-read-only/languages/themes/twentysixteen-fi.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentysixteen-fr_FR.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentysixteen-ja.mo
 wordpress-read-only/wp-content-read-only/languages/themes/twentysixteen-ms_MY.mo
@@ -1158,6 +1168,7 @@ wordpress-read-only/wp-content-read-only/themes/twentysixteen/template-parts/con
 wordpress-read-only/wp-content-read-only/themes/twentysixteen/template-parts/content-search.php
 wordpress-read-only/wp-content-read-only/themes/twentysixteen/template-parts/content-single.php
 wordpress-read-only/wp-content-read-only/themes/twentysixteen/template-parts/content.php
+wordpress-read-only/wp-content-read-only/wp-content
 wordpress-read-only/wp-cron.php
 wordpress-read-only/wp-includes/ID3/getid3.lib.php
 wordpress-read-only/wp-includes/ID3/getid3.php

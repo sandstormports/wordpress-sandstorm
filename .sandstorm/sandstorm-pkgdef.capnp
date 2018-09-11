@@ -19,9 +19,9 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "WordPress"),
 
-    appVersion = 15,  # Increment this for every release.
+    appVersion = 16,  # Increment this for every release.
 
-    appMarketingVersion = (defaultText = "v2018.09.10 (4.9.8)"),
+    appMarketingVersion = (defaultText = "v2018.09.11 (4.9.8)"),
     # Human-readable representation of appVersion. Should match the way you
     # identify versions of your app in documentation and marketing.
 
