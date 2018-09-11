@@ -876,7 +876,6 @@ wordpress-read-only/wp-content-read-only/db.php
 wordpress-read-only/wp-content-read-only/index.php
 wordpress-read-only/wp-content-read-only/install.php
 wordpress-read-only/wp-content-read-only/languages
-wordpress-read-only/wp-content-read-only/languages/.DS_Store
 wordpress-read-only/wp-content-read-only/languages/admin-ar.mo
 wordpress-read-only/wp-content-read-only/languages/admin-de_DE.mo
 wordpress-read-only/wp-content-read-only/languages/admin-es_ES.mo
@@ -1168,7 +1167,6 @@ wordpress-read-only/wp-content-read-only/themes/twentysixteen/template-parts/con
 wordpress-read-only/wp-content-read-only/themes/twentysixteen/template-parts/content-search.php
 wordpress-read-only/wp-content-read-only/themes/twentysixteen/template-parts/content-single.php
 wordpress-read-only/wp-content-read-only/themes/twentysixteen/template-parts/content.php
-wordpress-read-only/wp-content-read-only/wp-content
 wordpress-read-only/wp-cron.php
 wordpress-read-only/wp-includes/ID3/getid3.lib.php
 wordpress-read-only/wp-includes/ID3/getid3.php
