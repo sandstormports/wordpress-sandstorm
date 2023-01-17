@@ -1,7 +1,7 @@
 WordPress Sandstorm package
 ===========================
 
-This is the [Sandstorm](https://sandstorm.io) package of [WordPress](https://wordpress.com/). It depends on [this fork](https://github.com/wpsandstorm/wordpress) of WordPress.
+This is the [Sandstorm](https://sandstorm.io) package of [WordPress](https://wordpress.com/). It depends on [this fork](https://github.com/sandstormports/wordpress) of WordPress.
 
 ![Wordpress main view](.sandstorm/app-graphics/wordpress_example_01.png)
 
@@ -22,7 +22,7 @@ You will need to install:
 
 ```
 git clone https://github.com/sandstorm-io/vagrant-spk
-git clone https://github.com/wpsandstorm/wordpress-sandstorm
+git clone https://github.com/sandstormports/wordpress-sandstorm
 cd vagrant-spk
 export PATH=$(pwd)/vagrant-spk:$PATH
 cd ..
@@ -32,6 +32,6 @@ vagrant-spk vm up
 vagrant-spk dev
 ```
 
-visit [http://local.sandstorm.io:6080/](http://local.sandstorm.io:6080/) in a web browser
+visit [http://local.sandstorm.io:6090/](http://local.sandstorm.io:6090/) in a web browser
 
 Note: when you want to fork this repo and create actual app packages for the app store you would need either the original app key or create a new one and make your own version of the app.
