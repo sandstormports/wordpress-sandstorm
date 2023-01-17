@@ -24,10 +24,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # we give it this hint about operating system type.
     config.vm.guest = "debian"
   end
-  # We forward port 6080, the Sandstorm web port, so that developers can
-  # visit their sandstorm app from their browser as local.sandstorm.io:6080
-  # (aka 127.0.0.1:6080).
-  config.vm.network :forwarded_port, guest: 6080, host: 6080, host_ip: "127.0.0.1"
+  # We forward port 6090, the vagrant-spk web port, so that developers can
+  # visit their sandstorm app from their browser as local.sandstorm.io:6090
+  # (aka 127.0.0.1:6090).
+  config.vm.network :forwarded_port, guest: 6090, host: 6090, host_ip: "127.0.0.1"
   # Use a shell script to "provision" the box. This installs Sandstorm using
   # the bundled installer.
   config.vm.provision "shell", inline: "sudo bash /opt/app/.sandstorm/global-setup.sh", keep_color: true
