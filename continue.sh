@@ -2,7 +2,7 @@
 
 cp -r /wordpress-read-only/wp-content-read-only/* /var/wordpress/wp-content
 
-/usr/sbin/php-fpm7.2 --fpm-config /etc/php/7.2/fpm/php-fpm.conf -c /etc/php/7.2/fpm/php.ini
+/usr/sbin/php-fpm7.3 --fpm-config /etc/php/7.3/fpm/php-fpm.conf -c /etc/php/7.3/fpm/php.ini
 echo "started php-fpm. status code:" $?
 
 CGICONF=/var/fastcgi.conf

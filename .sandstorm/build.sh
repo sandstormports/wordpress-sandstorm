@@ -1,5 +1,5 @@
 #!/bin/bash
 set -euo pipefail
 cd /opt/app
-make
+sudo make
 exit 0

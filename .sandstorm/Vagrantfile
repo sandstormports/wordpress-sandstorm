@@ -14,8 +14,7 @@ unless Vagrant::DEFAULT_SERVER_URL.frozen?
 end
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Base on the Sandstorm snapshots of the official Debian 9 (stretch) box with vboxsf support.
-  config.vm.box = "debian/contrib-stretch64"
-  config.vm.box_version = "9.3.0"
+  config.vm.box = "debian/contrib-buster64"
   if Vagrant.has_plugin?("vagrant-vbguest") then
     # vagrant-vbguest is a Vagrant plugin that upgrades
     # the version of VirtualBox Guest Additions within each
