@@ -1,3 +1,5 @@
+## v2023.01.21 (4.9.8)
+- Updated environment and fixed bitrot
 ## v2018.09.11 (4.9.8)
 - Add Finnish FI translation #36
 ## v2018.09.10 (4.9.8)

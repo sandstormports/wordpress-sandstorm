@@ -19,9 +19,9 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "WordPress"),
 
-    appVersion = 16,  # Increment this for every release.
+    appVersion = 17,  # Increment this for every release.
 
-    appMarketingVersion = (defaultText = "v2018.09.11 (4.9.8)"),
+    appMarketingVersion = (defaultText = "v2023.01.21 (4.9.8)"),
     # Human-readable representation of appVersion. Should match the way you
     # identify versions of your app in documentation and marketing.
 
@@ -42,13 +42,7 @@ const pkgdef :Spk.PackageDefinition = (
     # case.
 
     metadata = (
-      # Data which is not needed specifically to execute the app, but is useful
-      # for purposes like marketing and display.  These fields are documented at
-      # https://docs.sandstorm.io/en/latest/developing/publishing-apps/#add-required-metadata
-      # and (in deeper detail) in the sandstorm source code, in the Metadata section of
-      # https://github.com/sandstorm-io/sandstorm/blob/master/src/sandstorm/package.capnp
       icons = (
-        # Various icons to represent the app in various contexts.
         appGrid = (svg = embed "app-graphics/wordpress-128.svg"),
         grain = (svg = embed "app-graphics/wordpress-24.svg"),
         market = (svg = embed "app-graphics/wordpress-150.svg"),
@@ -56,25 +50,17 @@ const pkgdef :Spk.PackageDefinition = (
       ),
 
       website = "https://wordpress.org/",
-      # This should be the app's main website url.
 
       codeUrl = "https://github.com/sandstormports/wordpress-sandstorm",
-      # URL of the app's source code repository, e.g. a GitHub URL.
-      # Required if you specify a license requiring redistributing code, but optional otherwise.
 
       license = (openSource = gpl2),
-      # The license this package is distributed under.  See
-      # https://docs.sandstorm.io/en/latest/developing/publishing-apps/#license
 
       categories = [webPublishing,],
-      # A list of categories/genres to which this app belongs, sorted with best fit first.
-      # See the list of categories at
-      # https://docs.sandstorm.io/en/latest/developing/publishing-apps/#categories
 
       author = (
         # Fields relating to the author of this app.
 
-        contactEmail = "jan@jambor.pro",
+        contactEmail = "inbox@jacobweisz.com",
         # Email address to contact for any issues with this app. This includes end-user support
         # requests as well as app store administrator requests, so it is very important that this be a
         # valid address with someone paying attention to it.
@@ -129,7 +115,7 @@ const pkgdef :Spk.PackageDefinition = (
         (width = 1166, height = 675, png = embed "app-graphics/wordpress_example_03.png"),
         (width = 1166, height = 675, png = embed "app-graphics/wordpress_example_04.png")
       ],
-      changeLog = (defaultText = embed "changelog.md"),
+      changeLog = (defaultText = embed "changeLog.md"),
       # Documents the history of changes in Github-flavored markdown format (with the same restrictions
       # as govern `description`). We recommend formatting this with an H1 heading for each version
       # followed by a bullet list of changes.
