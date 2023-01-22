@@ -88,6 +88,13 @@ define('WP_PLUGIN_DIR', '/var/wordpress/wp-content/plugins');
 define('WPMU_PLUGIN_DIR', '/var/wordpress/wp-content/mu-plugins');
 define('DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST']);
 
+/* Configure HTTP Proxy Server */
+define('WP_PROXY_HOST', '127.0.0.1');
+define('WP_PROXY_PORT', '4000');
+define('WP_PROXY_USERNAME', '');
+define('WP_PROXY_PASSWORD', '');
+define('WP_PROXY_BYPASS_HOSTS', 'localhost');
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

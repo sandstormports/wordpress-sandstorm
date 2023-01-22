@@ -89,6 +89,7 @@ opt/app
 opt/app/publish-it.sh
 opt/app/wordpress-read-only
 opt/app/wordpress-read-only/wp-content
+opt/powerbox-http-proxy/powerbox-http-proxy
 proc/cpuinfo
 publish-it.sh
 read-only-plugins/mu-plugins
@@ -142,6 +143,7 @@ usr/bin/rm
 usr/bin/sed
 usr/bin/sh
 usr/bin/sleep
+usr/bin/touch
 usr/bin/wget
 usr/lib/git-core/git-sh-prompt
 usr/lib/php/20180731/calendar.so
@@ -651,6 +653,7 @@ usr/share/zoneinfo/localtime
 usr/share/zoneinfo/zone.tab
 wordpress-read-only
 wordpress-read-only/index.php
+wordpress-read-only/powerbox.js
 wordpress-read-only/wp-admin
 wordpress-read-only/wp-admin/about.php
 wordpress-read-only/wp-admin/admin-ajax.php
@@ -1177,6 +1180,8 @@ wordpress-read-only/wp-includes/Requests/Hooker.php
 wordpress-read-only/wp-includes/Requests/Hooks.php
 wordpress-read-only/wp-includes/Requests/IDNAEncoder.php
 wordpress-read-only/wp-includes/Requests/IRI.php
+wordpress-read-only/wp-includes/Requests/Proxy.php
+wordpress-read-only/wp-includes/Requests/Proxy/HTTP.php
 wordpress-read-only/wp-includes/Requests/Response.php
 wordpress-read-only/wp-includes/Requests/Response/Headers.php
 wordpress-read-only/wp-includes/Requests/Transport.php
@@ -1205,6 +1210,7 @@ wordpress-read-only/wp-includes/canonical.php
 wordpress-read-only/wp-includes/capabilities.php
 wordpress-read-only/wp-includes/category-template.php
 wordpress-read-only/wp-includes/category.php
+wordpress-read-only/wp-includes/certificates/ca-bundle.crt
 wordpress-read-only/wp-includes/class-IXR.php
 wordpress-read-only/wp-includes/class-http.php
 wordpress-read-only/wp-includes/class-oembed.php
