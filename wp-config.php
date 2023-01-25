@@ -95,6 +95,10 @@ define('WP_PROXY_USERNAME', '');
 define('WP_PROXY_PASSWORD', '');
 define('WP_PROXY_BYPASS_HOSTS', 'localhost');
 
+/* Disable automatic update checks */
+define( 'AUTOMATIC_UPDATER_DISABLED', true );
+define( 'WP_AUTO_UPDATE_CORE', false );
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
