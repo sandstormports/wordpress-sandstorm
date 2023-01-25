@@ -13,9 +13,8 @@ $(git_repo_dir)/wordpress/.git:
 	apt-get update
 	apt-get install -y git g++ automake libtool pkg-config curl \
 		build-essential libcap-dev xz-utils zip \
-		unzip strace clang discount python zlib1g-dev golang \
+		unzip strace clang discount python zlib1g-dev \
 		cmake autoconf
-	mkdir ~/go
 
 	git clone ${wordpress_repo} $(git_repo_dir)/wordpress && cd $(git_repo_dir)/wordpress && git checkout ${wordpress_repo_branch}
 
@@ -23,6 +22,7 @@ wordpress-read-only: $(git_repo_dir)/wordpress/.git
 	cp -r $(git_repo_dir)/wordpress wordpress-read-only
 	rm -rf wordpress-read-only/.git
 	cp wp-config.php wordpress-read-only/
+	cp /opt/powerbox-http-proxy/build/index.js wordpress-read-only/powerbox.js
 	mv wordpress-read-only/wp-content wordpress-read-only/wp-content-read-only
 	ln -s /var/wordpress/wp-content wordpress-read-only/wp-content
 	cp read-only-plugins/sqlite-integration/db.php wordpress-read-only/wp-content-read-only/

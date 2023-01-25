@@ -39,4 +39,28 @@ sed --in-place='' \
         --expression='s/^;clear_env = no/clear_env=no/' \
         /etc/php/7.3/fpm/pool.d/www.conf
 
+# The version of golang in the debian repositories tends to be incredibly
+# out of date; let's get ourselves a newer version from upstream:
+if [ -e /opt/app/.sandstorm/go-version ]; then
+    # Get the same version we've used before
+    curl -L "https://go.dev/dl/$(cat '/opt/app/.sandstorm/go-version').linux-amd64.tar.gz" -o go.tar.gz
+else
+    # Get the newest version for a new project
+    curl -L "https://go.dev/dl/$(curl 'https://go.dev/VERSION?m=text').linux-amd64.tar.gz" -o go.tar.gz
+fi
+tar -C /usr/local -xzf go.tar.gz
+rm go.tar.gz
+echo 'export PATH=/usr/local/go/bin:$PATH' > /etc/profile.d/go.sh
+
+# Get the same version next time
+/usr/local/go/bin/go version | cut -d ' ' -f 3 > /opt/app/.sandstorm/go-version
+
+# Install node, to build the client-side part of the powerbox server:
+apt-get install -y apt-transport-https
+curl -sL https://deb.nodesource.com/setup_14.x | bash -
+apt-get install -y nodejs
+
+cd /opt && git clone https://github.com/zenhack/powerbox-http-proxy
+cd /opt/powerbox-http-proxy && /usr/local/go/bin/go build && npm install && npm run build
+
 exit 0
