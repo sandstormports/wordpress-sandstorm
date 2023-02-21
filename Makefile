@@ -22,7 +22,7 @@ wordpress-read-only: $(git_repo_dir)/wordpress/.git
 	cp -r $(git_repo_dir)/wordpress wordpress-read-only
 	rm -rf wordpress-read-only/.git
 	cp wp-config.php wordpress-read-only/
-	cp /opt/powerbox-http-proxy/build/index.js wordpress-read-only/powerbox.js
+	cp /opt/powerbox-http-proxy/powerbox-http-proxy.js wordpress-read-only/powerbox.js
 	mv wordpress-read-only/wp-content wordpress-read-only/wp-content-read-only
 	ln -s /var/wordpress/wp-content wordpress-read-only/wp-content
 	cp read-only-plugins/sqlite-integration/db.php wordpress-read-only/wp-content-read-only/

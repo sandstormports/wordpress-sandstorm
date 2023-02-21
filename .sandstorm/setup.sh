@@ -55,12 +55,7 @@ echo 'export PATH=/usr/local/go/bin:$PATH' > /etc/profile.d/go.sh
 # Get the same version next time
 /usr/local/go/bin/go version | cut -d ' ' -f 3 > /opt/app/.sandstorm/go-version
 
-# Install node, to build the client-side part of the powerbox server:
-apt-get install -y apt-transport-https
-curl -sL https://deb.nodesource.com/setup_14.x | bash -
-apt-get install -y nodejs
-
 cd /opt && git clone https://github.com/zenhack/powerbox-http-proxy
-cd /opt/powerbox-http-proxy && /usr/local/go/bin/go build && npm install && npm run build
+cd /opt/powerbox-http-proxy && /usr/local/go/bin/go build
 
 exit 0
