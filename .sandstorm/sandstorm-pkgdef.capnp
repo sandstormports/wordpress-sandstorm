@@ -19,9 +19,9 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "WordPress"),
 
-    appVersion = 17,  # Increment this for every release.
+    appVersion = 18,  # Increment this for every release.
 
-    appMarketingVersion = (defaultText = "v2023.02.20 (4.9.8)"),
+    appMarketingVersion = (defaultText = "v2023.02.22 (4.9.8)"),
     # Human-readable representation of appVersion. Should match the way you
     # identify versions of your app in documentation and marketing.
 
@@ -279,6 +279,12 @@ const startCommand :Spk.Manifest.Command = (
 const continueCommand :Spk.Manifest.Command = (
   argv = ["/sandstorm-http-bridge", "10000", "--", "/continue.sh"],
   environ = [
-    (key = "PATH", value = "/usr/local/bin:/usr/bin:/bin")
+    (key = "PATH", value = "/usr/local/bin:/usr/bin:/bin"),
+    (key = "SANDSTORM", value = "1"),
+    # Export SANDSTORM=1 into the environment, so that apps running within Sandstorm
+    # can detect if $SANDSTORM="1" at runtime, switching UI and/or backend to use
+    # the app's Sandstorm-specific integration code.
+    (key = "POWERBOX_WEBSOCKET_PORT", value = "3000"),
+    (key = "POWERBOX_PROXY_PORT", value = "4000"),
   ]
 );

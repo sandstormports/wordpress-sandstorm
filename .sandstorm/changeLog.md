@@ -1,3 +1,5 @@
+## v2023.02.22 (4.9.8)
+- Fix hang on launching existing WordPress blogs.
 ## v2023.02.20 (4.9.8)
 - Add support for external network requests using the Sandstorm Powerbox.
 - Updated environment and fixed bitrot
