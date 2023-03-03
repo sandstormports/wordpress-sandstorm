@@ -1174,6 +1174,7 @@ wordpress-read-only/wp-includes/IXR/class-IXR-message.php
 wordpress-read-only/wp-includes/IXR/class-IXR-request.php
 wordpress-read-only/wp-includes/IXR/class-IXR-server.php
 wordpress-read-only/wp-includes/IXR/class-IXR-value.php
+wordpress-read-only/wp-includes/Requests/Cookie.php
 wordpress-read-only/wp-includes/Requests/Cookie/Jar.php
 wordpress-read-only/wp-includes/Requests/Exception.php
 wordpress-read-only/wp-includes/Requests/Hooker.php
@@ -1210,7 +1211,7 @@ wordpress-read-only/wp-includes/canonical.php
 wordpress-read-only/wp-includes/capabilities.php
 wordpress-read-only/wp-includes/category-template.php
 wordpress-read-only/wp-includes/category.php
-wordpress-read-only/wp-includes/certificates/ca-bundle.crt
+wordpress-read-only/wp-includes/certificates
 wordpress-read-only/wp-includes/class-IXR.php
 wordpress-read-only/wp-includes/class-http.php
 wordpress-read-only/wp-includes/class-oembed.php

@@ -1,3 +1,5 @@
+## v2023.03.02 (4.9.8)
+- Fix certificate error when downloading plugins and theme updates.
 ## v2023.02.22 (4.9.8)
 - Fix hang on launching existing WordPress blogs.
 ## v2023.02.20 (4.9.8)

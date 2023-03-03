@@ -11,10 +11,12 @@ wait_for() {
     done
 }
 
+mkdir -p /var/certificates
+
 # Start our powerbox proxy server, and wait for it to write the cert:
 export DB_TYPE=sqlite3
 export DB_URI=/var/powerboxproxy.sqlite
-export CA_CERT_PATH=/var/ca-spoof-cert.pem
+export CA_CERT_PATH=/var/certificates/ca-bundle.crt
 touch $DB_URI
 rm -f $CA_CERT_PATH
 /opt/powerbox-http-proxy/powerbox-http-proxy &
