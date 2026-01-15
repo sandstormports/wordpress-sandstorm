@@ -2,8 +2,21 @@
 set -euo pipefail
 
 # As we are using an original Debian box image,
-# we ned to add some stuff before we get started
+# we need to add some stuff before we get started
 export DEBIAN_FRONTEND=noninteractive
+
+# Create backup of original sources.list
+cp /etc/apt/sources.list /etc/apt/sources.list.backup
+echo "Backup created: /etc/apt/sources.list.backup"
+
+# Write new sources.list
+cat > /etc/apt/sources.list << EOF
+deb http://archive.debian.org/debian/ buster main contrib non-free
+deb http://archive.debian.org/debian/ buster-updates main contrib non-free
+deb http://archive.debian.org/debian-security buster/updates main contrib non-free
+deb http://archive.debian.org/debian/ buster-backports main contrib non-free
+EOF
+
 apt-get update
 apt-get install -y curl
 

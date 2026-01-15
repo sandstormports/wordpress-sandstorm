@@ -46,7 +46,7 @@ if [ -e /opt/app/.sandstorm/go-version ]; then
     curl -L "https://go.dev/dl/$(cat '/opt/app/.sandstorm/go-version').linux-amd64.tar.gz" -o go.tar.gz
 else
     # Get the newest version for a new project
-    curl -L "https://go.dev/dl/$(curl 'https://go.dev/VERSION?m=text').linux-amd64.tar.gz" -o go.tar.gz
+    curl -L "https://go.dev/dl/$(curl 'https://go.dev/VERSION?m=text' | head -n 1).linux-amd64.tar.gz" -o go.tar.gz
 fi
 tar -C /usr/local -xzf go.tar.gz
 rm go.tar.gz
@@ -55,7 +55,7 @@ echo 'export PATH=/usr/local/go/bin:$PATH' > /etc/profile.d/go.sh
 # Get the same version next time
 /usr/local/go/bin/go version | cut -d ' ' -f 3 > /opt/app/.sandstorm/go-version
 
-cd /opt && git clone https://github.com/zenhack/powerbox-http-proxy
+cd /opt && git clone https://github.com/sandstorm-org/powerbox-http-proxy
 cd /opt/powerbox-http-proxy && /usr/local/go/bin/go build
 
 exit 0
