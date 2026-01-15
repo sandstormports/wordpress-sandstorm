@@ -4,7 +4,7 @@ git_repo_dir = /opt/wordpress_repo
 
 .PHONY: all clean
 
-all: wordpress-read-only sandstorm/bin/getPublicId
+all: wordpress-read-only
 
 clean:
 	rm -rf wordpress-read-only
